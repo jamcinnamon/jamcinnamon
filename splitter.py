@@ -25,7 +25,8 @@ loader = CSVLoader(
 
 
 documents = loader.load()
-df= pd.set_index(keys='coverletter')
+
+
 embedding = OpenAIEmbeddings()
 
 vector_store = InMemoryVectorStore.from_documents(documents, embedding)
